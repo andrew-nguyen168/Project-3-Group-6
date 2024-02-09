@@ -1,19 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Flush Pal
-        </title>
+        <title>Flush Pal</title>
         <!-- Link CSS here -->
         <link rel="stylesheet" href="css/style.css">
-        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script>
+          (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+            key: "AIzaSyA1vBMECKKVGXh-_AGVOXBimZmDLlUor0Y",
+            v: "weekly",
+            // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+            // Add other bootstrap parameters as needed, using camel case.
+          });
+        </script>
     </head>
     <body>
-        <!-- Navigation -->
-        
-        <!-- Footer -->
-
-      <!-- Link JavaScript here -->
-      <script src="js/index.js"></script>
+        <!-- Search bar -->
+        <div class="top-bar"></div>
+        <div class="search-container">
+          <input type="text" class="search"></input>
+          <button type="button" class="filter-button">
+            <img src="images/icons/filter.svg">
+          </button>
+        </div>
+        <!-- Map -->
+        <div id="map"></div>
+        <!-- Slider -->
+        <div class="slider-container">
+          <div class="slider-expand"><img src="images/slider-tab.png"></div>
+          <h2>Recommended Toilets</h2>
+          <!-- Card -->
+            <div class="card-container">
+              <div class="card-contents">
+                <p class="card-title">Treasury Gardens Toilet Block</p>
+                <div class="toilet-rating">
+                  <img src="images/icons/toilet-paper.svg">
+                  <img src="images/icons/toilet-paper.svg">
+                  <img src="images/icons/toilet-paper.svg">
+                  <img src="images/icons/toilet-paper.svg">
+                  <img src="images/icons/toilet-paper.svg">
+                </div>
+                <p class="opening-hours">Open 8am - 10pm</p>
+                <div class="toilet-facility">
+                  <img src="images/icons/disabled.svg">
+                  <img src="images/icons/hand-dryer.svg">
+                  <img src="images/icons/soap.svg">
+                  <img src="images/icons/lightbulb.svg">
+                  <img src="images/icons/sanitary.svg">
+                  <div class="chips" id="distance-label">500m Away</div> 
+                </div>
+              </div>
+              <div><img class="card-img" src="images/toilets/treasury-gardens.png"></div>
+          </div>
+        </div>
+        <!-- Bottom Navigation -->
+        <div class="nav">
+          <div class="nav-item">
+            <img src="images/icons/compass.svg">
+            Explore
+          </div>
+          <div class="nav-item">
+            <img src="images/icons/bookmark.svg">
+            Saved
+          </div>
+          <div class="nav-item">
+            <img src="images/icons/account.svg">
+            Profile
+          </div>
+        </div>
+        <!-- Link JavaScript here -->
+    <script src="js/index.js"></script>
     </body>
-  
+    
 </html>

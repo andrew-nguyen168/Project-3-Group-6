@@ -1,17 +1,132 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Flush Pal</title>
+        <title>Profile</title>
         <!-- Link CSS here -->
         <link rel="stylesheet" href="css/style.css">
-        
     </head>
-    <body>
-        <!-- Navigation -->
-        
-        <!-- Footer -->
-
-      <!-- Link JavaScript here -->
+    <body class="toilet-profile-background">
+        <div class="top-bar"></div>
+        <!-- Photo Gallery -->
+        <div class="card-gallery">
+            <div class="img-container">
+                <img src="images/toilets/treasury-gardens.png">
+                <div id="back-btn" class="icon-btn">
+                    <img class="icons" src="images/icons/back.svg">
+                </div>
+                <div id="save-btn" class="icon-btn-circle">
+                    <img id="save-icon" class="icons" src="images/icons/save.svg">
+                    <p>Save</p>
+                </div>
+                <div class="chips" id="open">Open</div>
+                <div class="chips" id="imgCounter">1/6</div>
+            </div>
+        </div>
+        <div class="gallery-indicators">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="description-container">
+            <h2>Treasury Gradens Toilet Block</h2>
+            <div>
+                <h4 class="titles">Description</h4>
+                <p>Small toilet block with basic facilities</p>
+                <p>Bright with lots of natural light</p>
+                <p>Open 8am-8pm</p>
+            </div>
+            <div class="description-bottom">
+                <div class="chips" id="distance-label">500m Away</div>
+                <div style="clear:both"></div>
+                <button class="primary-button" id="direction-btn">Get Directions</button>
+            </div>
+        </div>
+        <div class="facility-container">
+            <h4 class="titles">Facilities</h4>
+            <div class="facility-icon-container">
+                <div class="facility-box">
+                    <div class="facility-image-box"><img src="images/icons/sanitary.svg"></div>
+                    Sanitary bins
+                </div>
+                <div class="facility-box">
+                    <div class="facility-image-box"><img src="images/icons/disabled.svg"></div>
+                    Wheelchair accessible
+                </div>
+                <div class="facility-box">
+                    <div class="facility-image-box"><img src="images/icons/lightbulb.svg"></div>
+                    Well lit
+                </div>
+                <div class="facility-box">
+                    <div class="facility-image-box"><img src="images/icons/soap.svg"></div>
+                    Regularly has soap
+                </div>
+                <div class="facility-box">
+                    <div class="facility-image-box"><img src="images/icons/hand-dryer.svg"></div>
+                    Hand dryers
+                </div>
+            </div>
+        </div>
+        <div class="review-container">
+            <h4 class="titles">Reviews</h4>
+            <div class="review-top">
+                <div class="review-number-box">
+                    <div>3.5</div>
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                </div>
+                <span id="total-reviews">108 reviews</span>    
+            </div>
+            <div class="review-card">
+                <p class="review-usernames">Niki Smith</p>
+                <div class="toilet-rating">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <p class="body-text">4 days ago</p>
+                </div>
+                    <div class="body-text">These are pretty decent for public toilets. 
+                    Bright with lots of natural light in so they don’t feel dingy
+                    </div>
+                <img class="icons" src="images/icons/lightbulb.svg">
+            </div>
+            <div class="review-card">
+                <p class="review-usernames">Tom Green</p>
+                <div class="toilet-rating">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <img class="icons" src="images/icons/toilet-paper.svg">
+                    <p class="body-text">4 days ago</p>
+                </div>
+                    <div class="body-text">These are pretty decent for public toilets. 
+                    Bright with lots of natural light in so they don’t feel dingy
+                    </div>
+                <img class="icons" src="images/icons/lightbulb.svg">
+            </div>
+        </div>
+        <div class="nav">
+        <div class="nav-item">
+            <img src="images/icons/compass.svg">
+            Explore
+        </div>
+        <div class="nav-item">
+            <img src="images/icons/bookmark.svg">
+            Saved
+        </div>
+        <div class="nav-item">
+            <img src="images/icons/account.svg">
+            Profile
+        </div>
+        </div>
       <script src="js/index.js"></script>
     </body>
   
