@@ -12,7 +12,7 @@
             <div class="user-profile-group">
                 <img src="images/user-profile.png">
                 <div class="user-details">
-                    <h3>Jane Smith</h3>
+                    <p id="username">Jane Smith</p>
                     <p>jane.smith@email.com</p>
                 </div>
             </div>
@@ -46,23 +46,31 @@
                     <img src="images/icons/arrow-right.svg">
                 </div>
             </div>
-            <button class="primary-btn">View saved restrooms</button>
+            <button class="primary-btn">
+                <a href="saved-items.html" class="hyperlinks">View saved restrooms</a>
+            </button>
         </div>
         <!-- Bottom Navigation -->
         <div class="nav">
             <div class="nav-item">
-            <img src="images/icons/compass.svg">
-            Explore
+              <a class="hyperlinks" href="index.html">
+              <img src="images/icons/compass.svg">
+              Explore
+              </a>
             </div>
             <div class="nav-item">
-            <img src="images/icons/bookmark.svg">
-            Saved
+              <a class="hyperlinks" href="saved-items.html">
+                <img src="images/icons/bookmark.svg">
+                Saved
+              </a>
             </div>
             <div class="nav-item">
-            <img src="images/icons/account.svg">
-            Profile
+              <a class="hyperlinks" href="not-login.html">
+                <img src="images/icons/account.svg">
+                Profile
+              </a>
             </div>
-        </div>
+          </div>
         <!-- Link JavaScript here -->
         <script src="js/index.js"></script>
     </body>

@@ -19,9 +19,49 @@
         <div class="top-bar"></div>
         <div class="search-container">
           <input type="text" class="search"></input>
-          <button type="button" class="filter-button">
-            <img src="images/icons/filter.svg">
-          </button>
+          <div class="dropdown">
+            <button type="button" class="filter-button">
+              <img src="images/icons/filter.svg">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <div>Best rated</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Most rated</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Accessibility</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Baby change room</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Sanitary item disposal</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Gender neutral</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Sharps disposal</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>Showers</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+                <div class="dropdown-item">
+                  <div>24/7 access</div>
+                  <img id="dropdown-icons" src="images/icons/blank-check-box.svg">
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
         <!-- Map -->
         <div id="map"></div>
@@ -56,16 +96,22 @@
         <!-- Bottom Navigation -->
         <div class="nav">
           <div class="nav-item">
+            <a class="hyperlinks" href="index.html">
             <img src="images/icons/compass.svg">
             Explore
+            </a>
           </div>
           <div class="nav-item">
-            <img src="images/icons/bookmark.svg">
-            Saved
+            <a class="hyperlinks" href="saved-items.html">
+              <img src="images/icons/bookmark.svg">
+              Saved
+            </a>
           </div>
           <div class="nav-item">
-            <img src="images/icons/account.svg">
-            Profile
+            <a class="hyperlinks" href="not-login.html">
+              <img src="images/icons/account.svg">
+              Profile
+            </a>
           </div>
         </div>
         <!-- Link JavaScript here -->
