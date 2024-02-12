@@ -1,5 +1,5 @@
 // Initialize and add the map
-let map;
+let map, infoWindow;
 
 async function initMap() {
   // The location of Uluru
@@ -15,10 +15,46 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
     // Disable UI controls
-    disableDefaultUI: true,
+    // disableDefaultUI: true,
     zoomControl: Boolean,
   });
+  infoWindow = new google.maps.infoWindow();
 
+  locationButton.textContent = "Pan to Current Location";
+  locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  locationButton.addEventListener("click", () => {
+    //Try HTML 5 geolocation
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Location found.");
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        },
+      );
+    } else {
+      //Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(
+      browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation.",
+    );
+    infoWindow.open(map);
+  }
   // The marker, positioned at Uluru
   const marker = new AdvancedMarkerElement({
     map: map,
@@ -26,33 +62,5 @@ async function initMap() {
     title: "Uluru",
   });
 }
-function createCenterControl(map) {
-  const controlButton = document.createElement("button");
-
-  // Set CSS for the control.
-  controlButton.style.backgroundColor = "#fff";
-  controlButton.style.border = "2px solid #fff";
-  controlButton.style.borderRadius = "3px";
-  controlButton.style.boxShadow = "0 2px 6px rgba(0,0,0,.3)";
-  controlButton.style.color = "rgb(25,25,25)";
-  controlButton.style.cursor = "pointer";
-  controlButton.style.fontFamily = "Roboto,Arial,sans-serif";
-  controlButton.style.fontSize = "16px";
-  controlButton.style.lineHeight = "38px";
-  controlButton.style.margin = "8px 0 22px";
-  controlButton.style.padding = "0 5px";
-  controlButton.style.textAlign = "center";
-
-  controlButton.textContent = "Center Map";
-  controlButton.title = "Click to recenter the map";
-  controlButton.type = "button";
-
-  // Setup the click event listeners: simply set the map to Chicago.
-  controlButton.addEventListener("click", () => {
-    map.setCenter(chicago);
-  });
-
-  return controlButton;
-}
-
+window.initMap = initMap;
 initMap();
