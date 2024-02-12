@@ -66,9 +66,11 @@ body {
     color: #3C3C43;
   }
   .top-bar {
-    height: 45px;
+    height: 50px;
     width: 100%;
     background-color: #FFB579;
+    padding: 0;
+    margin: 0;
   }
   /* ------ Primary Navigation ------ */
   .nav {
@@ -114,11 +116,11 @@ body {
   /* ------ Slider Tab ------ */
   .slider-container {
     background-color: #FFB579;
-    height: 380px;
     border-radius: 15px 15px 0px 0px;
-    margin-top: -20px;
+    margin-top: 20px;
     z-index: 10;
     position: relative;
+    padding-bottom: 5px;
   }
   .slider-container h2 {
     margin: 10px;
@@ -196,17 +198,15 @@ body {
     bottom: 0;
     left: 0;
   }
-  .onboarding-page {
-    margin: 20px;
-    padding: 100px 0px;
-  }
   .toilet-name {
     font-family: "Magilio";
     font-size: 30px;
     margin-bottom: 10px;
   }
 /* /////////////////////////// EXPLORE PAGE ////////////////////////// */
-
+.explore-page {
+  
+}
 /* ------ Card ------ */
 .card-container{
   background-color: white;
@@ -279,6 +279,7 @@ body {
   .dropdown {
     position: relative;
     display: inline-block;
+    
   }
   .dropdown-content {
     display: none;
@@ -288,6 +289,7 @@ body {
     padding: 10px;
     border-radius: 15px 0px 0px 15px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: -15px;
   }
   .dropdown:hover .dropdown-content {
     display: block;
@@ -315,6 +317,7 @@ body {
     justify-content: center;
     padding: 10px;
     background-color: #FFE7DF;
+    z-index: 0;
   }
   .filter-button img {
     height: 30px;
@@ -352,7 +355,7 @@ body {
     width: 380px;
    }
   .toilet-profile-background {
-    background-color: #FFE7DF;
+    background-image: url("/images/toilet-profile-background.png");
   }
    .gallery-indicators {
     text-align: center;
@@ -487,9 +490,14 @@ body {
   }
 
 /* /////////////////////////// PROFILE & NOT LOGGED IN PAGE ////////////////////////// */
+.user-profile-page {
+  background-image: url("/images/profile-background.png");
+}
+.not-login-page {
+  background-image: url("/images/not-login-background.png");
+}
 .profile-container {
-  padding: 100px 20px;
-  background-color: #D9F0B8;
+  padding: 130px 20px;
 }
 .profile-container h2 {
   font-size: 30px;
@@ -548,6 +556,9 @@ body {
   display: flex;
 }
 /* ////////////////////////////// LOGIN PAGE /////////////////////////// */
+.login-page {
+  background-image: url("/images/login-background.png");
+}
 .login-container {
   padding: 100px 20px;
   text-align: center;
@@ -582,23 +593,44 @@ body {
   padding-left: 20px;
 }
 /* /////////////////////////// TUTORIAL PAGE ////////////////////////// */
-  .tutorial-container {
-    text-align: center;
-    width: 100%;
-    font-size: 24px;
-  }
-  .tutorial-img {
-    margin: 20px;
-  }
-  #onboarding-btn {
-    color: white;
-    text-decoration: none;
-  }
-  #tutorial-img-2 {
-    padding-top: 127px;
-    padding-bottom: 127px;
-  }
+.tutorial-1-page {
+  margin: 20px;
+  padding: 80px 0px;
+  background-image: url("/images/tutorial-1-background.png");
+}
+.tutorial-2-page {
+  margin: 20px;
+  padding: 80px 0px;
+  background-image: url("/images/tutorial-2-background.png");
+}
+.tutorial-3-page {
+  margin: 20px;
+  padding: 80px 0px;
+  background-image: url("/images/tutorial-3-background.png");
+}
+.tutorial-container {
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+}
+.tutorial-img {
+  margin: 20px;
+}
+#onboarding-btn {
+  color: white;
+  text-decoration: none;
+}
+#tutorial-img-2 {
+  padding-top: 127px;
+  padding-bottom: 127px;
+}
   /* /////////////////////////// SPLASH PAGE ////////////////////////// */
+  .splash-page {
+    background-image: url("/images/splash-background.png");
+    background-repeat: no-repeat;
+    margin: 20px;
+    padding: 80px 0px;
+  }
   .splash-container {
     padding: 100px 0px;
     display: flex;
@@ -611,11 +643,17 @@ body {
   .splash-header {
     font-size: 96px;
     margin: 0;
+    text-shadow: 8px 8px white;
   }
   .box {
     height: 292px;
   }
   /* /////////////////////////// SAVED ITEMS PAGE ////////////////////////// */
+  .saved-items-page {
+    background-image: url("/images/saved-items-background.png");
+    background-repeat: no-repeat;
+    background-color: #D9F0B8;
+  }
   .saved-items-container {
     display: flex;
     flex-direction: column;
@@ -661,5 +699,20 @@ body {
   .saved-img-container img {
     height: 150px;
     width: 320px;
+  }
+
+   /* /////////////////////////// LOADING PAGE ////////////////////////// */
+  .loading-container {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 500px;
+  }
+  .loading-title {
+    text-shadow: 5px 5px white;
+  }
+  .loading-page {
+    background-image: url("/images/loading-screen.png");
+    background-repeat: no-repeat;
   }
 }

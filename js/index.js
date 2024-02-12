@@ -14,7 +14,6 @@ async function initMap() {
     zoom: 4,
     center: position,
     mapId: "DEMO_MAP_ID",
-    // Disable UI controls
     // disableDefaultUI: true,
     zoomControl: Boolean,
   });
@@ -66,7 +65,10 @@ window.initMap = initMap;
 initMap();
 
 // jQuery
-$('#saved-toilet').on("click", function() {
-  $("#saved-toilet").attr("src", "images/icons/save-filled.svg")
-  console.log("here");
+$(function() {
+  $('#save-btn').click(function(){
+    console.log("here");
+    $("#saved-toilet").attr("src", "images/icons/save-filled.svg");
+    return false;
+  });
 });
