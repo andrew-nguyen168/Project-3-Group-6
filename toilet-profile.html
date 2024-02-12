@@ -11,11 +11,13 @@
         <div class="card-gallery">
             <div class="img-container">
                 <img id="gallery-img"src="images/toilets/treasury-gardens.png">
+                <a href="index.html">
                     <div id="back-btn" class="icon-btn">
                             <img class="icons" src="images/icons/back.svg">
                     </div>
+                </a>
                 <div id="save-btn" class="icon-btn-circle">
-                    <img class="icons" src="images/icons/save.svg">
+                    <img id="saved-toilet" class="icons" src="images/icons/save.svg">
                     Save
                 </div>
                 <div class="chips" id="open">Open</div>
@@ -39,10 +41,10 @@
                 <p>Bright with lots of natural light</p>
                 <p>Open 8am-8pm</p>
             </div>
-            <div class="description-bottom">
-                <div class="distance-chips" id="distance-label">500m Away</div>
+            <div>
+                <div class="distance-chips" id="distance-label-profilefc">500m Away</div>
                 <div style="clear:both"></div>
-                <button class="direction-button" id="direction-btn">Get Directions</button>
+                <button class="direction-btn">Get Directions</button>
             </div>
         </div>
         <div class="facility-container">
@@ -116,8 +118,8 @@
         </div>
         <div class="nav">
             <div class="nav-item">
-              <a class="hyperlinks" href="index.html">
-              <img src="images/icons/compass.svg">
+              <a id="nav-active"class="hyperlinks" href="index.html">
+              <img src="images/icons/compass-active.svg">
               Explore
               </a>
             </div>
@@ -135,6 +137,7 @@
             </div>
           </div>
       <script src="js/index.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     </body>
   
 </html>

@@ -64,3 +64,9 @@ async function initMap() {
 }
 window.initMap = initMap;
 initMap();
+
+// jQuery
+$('#saved-toilet').on("click", function() {
+  $("#saved-toilet").attr("src", "images/icons/save-filled.svg")
+  console.log("here");
+});
