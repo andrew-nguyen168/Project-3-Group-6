@@ -1,5 +1,5 @@
 // Initialize and add the map
-let map, infoWindow;
+let map;
 
 async function initMap() {
   // The location of Uluru
@@ -14,46 +14,8 @@ async function initMap() {
     zoom: 4,
     center: position,
     mapId: "DEMO_MAP_ID",
-    // disableDefaultUI: true,
-    zoomControl: Boolean,
   });
-  infoWindow = new google.maps.infoWindow();
 
-  locationButton.textContent = "Pan to Current Location";
-  locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
-    //Try HTML 5 geolocation
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        },
-      );
-    } else {
-      //Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(
-      browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation.",
-    );
-    infoWindow.open(map);
-  }
   // The marker, positioned at Uluru
   const marker = new AdvancedMarkerElement({
     map: map,
@@ -61,14 +23,5 @@ async function initMap() {
     title: "Uluru",
   });
 }
-window.initMap = initMap;
-initMap();
 
-// jQuery
-$(function() {
-  $('#save-btn').click(function(){
-    console.log("here");
-    $("#saved-toilet").attr("src", "images/icons/save-filled.svg");
-    return false;
-  });
-});
+initMap();

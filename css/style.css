@@ -204,9 +204,6 @@ body {
     margin-bottom: 10px;
   }
 /* /////////////////////////// EXPLORE PAGE ////////////////////////// */
-.explore-page {
-  
-}
 /* ------ Card ------ */
 .card-container{
   background-color: white;
@@ -356,6 +353,7 @@ body {
    }
   .toilet-profile-background {
     background-image: url("/images/toilet-profile-background.png");
+    background-repeat: no-repeat;
   }
    .gallery-indicators {
     text-align: center;
@@ -492,9 +490,11 @@ body {
 /* /////////////////////////// PROFILE & NOT LOGGED IN PAGE ////////////////////////// */
 .user-profile-page {
   background-image: url("/images/profile-background.png");
+  background-repeat: no-repeat;
 }
 .not-login-page {
   background-image: url("/images/not-login-background.png");
+  background-repeat: no-repeat;
 }
 .profile-container {
   padding: 130px 20px;
@@ -558,6 +558,7 @@ body {
 /* ////////////////////////////// LOGIN PAGE /////////////////////////// */
 .login-page {
   background-image: url("/images/login-background.png");
+  background-repeat: no-repeat;
 }
 .login-container {
   padding: 100px 20px;
@@ -597,16 +598,19 @@ body {
   margin: 20px;
   padding: 80px 0px;
   background-image: url("/images/tutorial-1-background.png");
+  background-repeat: no-repeat;
 }
 .tutorial-2-page {
   margin: 20px;
   padding: 80px 0px;
   background-image: url("/images/tutorial-2-background.png");
+  background-repeat: no-repeat;
 }
 .tutorial-3-page {
   margin: 20px;
   padding: 80px 0px;
   background-image: url("/images/tutorial-3-background.png");
+  background-repeat: no-repeat;
 }
 .tutorial-container {
   text-align: center;
